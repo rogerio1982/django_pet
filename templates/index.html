@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3><a>Meus pets</a></h3>
+</br>
+
+{% for row in rows %}
+<div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{row.image}}" alt="Norway" style="height:100%; width:100%;" >
+      <div class="w3-container w3-white">
+        <p><b>{{row.nome}}</b></p>
+        <p>{{row.descricao}}.</p>
+      </div>
+    </div>
+ {% endfor %}
+
+{% endblock %}
